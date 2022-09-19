@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body { 
+            font: normal 1em arial;
+        }
+    </style>
+</head>
+<body>
+   <h1>Digite o seu País</h1>
+   <input type="text" name="txtp" id="txtp">
+   <input type="button" value="Verificar" onclick="procurar()">
+   <div id="res">
+
+   </div>
+   <script>
+       function procurar() {
+        var txtp = window.document.querySelector('input#txtp')
+        var res = window.document.querySelector('div#res')
+        var pais = (txtp.value)
+        res.innerHTML = `<p>Seu país é <strong>${pais}</strong></p>`
+        if (pais == 'brasil') {
+            res.innerHTML += `<p>Você é Brasileiro!</p>`
+        } else {
+            res.innerHTML += `Você é Estrangeiro!`
+        }
+       }
+   </script>
+</body>
+</html>
